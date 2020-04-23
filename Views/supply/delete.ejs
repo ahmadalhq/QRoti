@@ -11,7 +11,7 @@
         <div class="container-fluid">
             <h1>Are you sure want to delete <%= data[0].name %> ?</h1>
             <form action="/supply/delete/<%= data[0].id %>" method="POST">
-                <input type="submit">
+                <input type="submit" value="Delete <%=data[0].name%>">
             </form>
             <button type="button" class="btn btn-outline-danger"><a href="/supply">Cancel</a></button>
         </div>

@@ -23,8 +23,8 @@ class SupplyController{
         }
 
         Supply
-            .Create(newSupply)
-            .then(data => res.render('',{newSupply}))
+            .create(newSupply)
+            .then(data => res.redirect('/supply'))
             .catch(err => res.send(err.message))
  
     }
@@ -111,7 +111,7 @@ class SupplyController{
 
         Supply
             .destroy({where : {id : req.params.id}})
-            .then(data => res.render('/supply', {first_name :acc.first_name, last_name : acc.last_name}))
+            .then(data => res.redirect('/supply'))
             .catch(err => res.send(err.message))
     }
 }

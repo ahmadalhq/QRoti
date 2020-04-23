@@ -5,7 +5,7 @@ To-DO:
 3.~~buat page untuk kasir <br>~~
 4.~~implement Barcode untuk item <br>~~
 5.~~implement add row for transactions <br>~~
-6.css (optional) <br>~~
+6.~~css (optional) <br>~~
 7.search (optional) <br>
 
 

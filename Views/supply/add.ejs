@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add New Item</title>
+        <link href="/style/supply.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Spartan" rel="stylesheet">
+    </head>
+    <body>
+        <%- include('../partials/supplyheader.ejs')%>
+        <div class="container">
+            <form action='./supply/add' method="POST">
+                <input class="input" type="text" placeholder="Name" name="name"></br>
+                <select name="type" value="--pick one--">
+                    <option value="food">Food</option>
+                    <option value="drink">Drink</option>
+                    <option value="tools">Tools</option>
+                </select><br>
+                <input class="input" type="number" placeholder="0" name="price"></br>
+                <input class="input" type="number" placeholder="0" name="quantity"></br>
+                <input id="login" type="submit" name = "Add Item"> 
+            </form>
+            <button type="button" class="btn btn-outline-danger"><a href="/supply">Cancel</a></button>
+        </div>
+    </body>
+    <%- include('../partials/footer.ejs')%>
+</html>

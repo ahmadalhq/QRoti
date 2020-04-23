@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link href="/style/login.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Spartan" rel="stylesheet">
+    <title>:OUR WORLD: - What To Do ?? </title>
+  </head>
+  <body class="index" ondragstart="return false;" ondrop="return false;">
+    <%- include('./partials/header.ejs')%>
+    <!-- <%- include ('./partials/logo.ejs') %> -->
+    <%- include('./partials/loginInvalid.ejs') %>
+    <br>
+    <div class="container">
+      <form action='/login' method="POST">
+          <input class="input" type="text" placeholder="Username" name="username"></br>
+          <input class="input" type="password" placeholder="Password" name="password"></br>
+          <input type="submit" name = "Login"> 
+      </form>
+      <button type="button" class="btn btn-outline-danger"><a href="/">Cancel</a></button>
+    </div>
+  </body>
+  <%- include('./partials/footer.ejs')%>
+  <!-- <script src="main.js"></script> -->
+</html>

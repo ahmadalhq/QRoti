@@ -1,0 +1,31 @@
+{
+  "name": "pair-project",
+  "version": "1.0.0",
+  "main": "load.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laevenx/testproject.git"
+  },
+  "author": "Grady & Haqqi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laevenx/testproject/issues"
+  },
+  "homepage": "https://github.com/laevenx/testproject#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "ejs": "^3.0.2",
+    "ejs-lint": "^1.1.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "nodemon": "^2.0.3",
+    "pg": "^8.0.3",
+    "sequelize": "^5.21.7",
+    "sequelize-cli": "^5.5.1"
+  },
+  "keywords": [],
+  "description": ""
+}

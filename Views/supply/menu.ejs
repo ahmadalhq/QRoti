@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Supply Menu</title>
+        <link href="/style/supply.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Spartan" rel="stylesheet">
+    </head>
+    <script src="./script/JsBarcode.all.min.js"></script>
+    <body>
+        <div id="data" var="<%= data %>"></div>
+        <%- include('../partials/supplyheader.ejs')%>
+        <h1>Welcome, <%= name %> </h1>
+        <div class="center"><p>Item List</p></div><br>
+        <%- include('../partials/searchname.ejs') %>
+        <br><br>
+        <a class="btn btn-primary" href="/supply/add" role="button">Add Item</a>
+        <div class="container-fluid">
+            <table class="table table-bordered">
+            <div class="table">
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Type</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                    <td>Actions</td>
+                    <td>Barcode</td>
+                </tr>
+                <br>
+                <% for (let i = 0; i < data.length; i++ ){ %>
+                <tr>
+                    <td><%= data[i].id %></td>
+                    <td><%= data[i].name %></td>
+                    <td><%= data[i].product_type %></td>
+                    <td><%= data[i].quantity %></td>
+                    <td><%= data[i].price %></td>
+                    <%- include('../partials/actions.ejs',{i})%>
+                    <td><svg id="barcode<%= data[i].id %>"></svg></td>
+                    <%- include('../partials/barcode.ejs',{i})%>
+                </tr>
+                <br>
+            <% } %>
+            </div>
+            </table>
+        </div>
+    </body>
+    <%- include('../partials/footer.ejs')%>
+</html>

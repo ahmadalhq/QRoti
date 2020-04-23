@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link href="./style/login.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Spartan" rel="stylesheet">
+    <title>Register Account</title>
+  </head>
+
+<body class="index" ondragstart="return false;" ondrop="return false;">
+  <%- include('./partials/header.ejs')%>
+  <!-- <%- include ('./partials/logo.ejs') %> -->
+<br>
+  <div class="container">
+    <form action='/register' method="POST">
+        <input class="input" type="text" placeholder="First Name" name="first_name" required></br>
+        <input class="input" type="text" placeholder="Last Name" name="last_name" required></br>
+        <input class="input" type="email" placeholder="Email" name="email" required></br>
+        <input class="input" type="text" placeholder="Username" name="username" required></br>
+        <input class="input" type="password" placeholder="Password" name="password" required></br>
+        <input id="login" type="submit" name = "Register"> 
+    </form>
+    <button type="button" class="btn btn-outline-danger"><a href="/">Cancel</a></button>
+  </div>
+</body>
+<%- include('./partials/footer.ejs')%>
+</html>

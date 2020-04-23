@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Item</title>
+        <link href="/style/supply.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Spartan" rel="stylesheet">
+    </head>
+    <body>
+        <%- include('../partials/supplyheader.ejs')%>
+        <br>
+        <div class="container">
+            <form action='/supply/edit/<%= data[0].id %>' method="POST">
+                <input class="input" type="text" placeholder="name" value="<%= data[0].name %>" name="name"></br><br>
+                <select name="type">
+                    <option>--Select Type--</option>
+                    <option value="food" <%= data[0].product_type == 'food' ? 'selected' : '' %>>Food</option>
+                    <option value="drink" <%= data[0].product_type == 'drink' ? 'selected' : '' %>>Drink</option>
+                    <option value="tool" <%= data[0].product_type == 'tool' ? 'selected' : '' %>>Tool</option>
+                </select><br><br>
+                <input class="input" type="number" placeholder="price" value="<%= data[0].price %>" name="price"></br><br>
+                <input class="input" type="number" placeholder="quantity" value="<%= data[0].quantity %>" name="quantity"></br><br>
+                <input type="submit" name = "Edit Item"><br>
+            </form>
+            <button type="button" class="btn btn-outline-danger"><a href="/supply">Cancel</a></button>
+        </div>
+    </body>
+    <%- include('../partials/footer.ejs')%>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buy Menu</title>
+        <link href="/style/supply.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Spartan" rel="stylesheet">
+        <script src="../scripts/JsBarcode.all.min.js"></script>
+    </head>
+    <body>
+        <%- include('../partials/supplyheader.ejs')%>
+        <div class="container">
+            <form action='./transaction' method="POST">
+                <p>Buyer name:</p>
+                <input class="input" type="text" placeholder="Buyer" name="buyer"></br>
+                <select id="SupplySelect" name="SupplyId" value="--pick one--">
+                    <% for (let i = 0 ; i < supply.length ; i++){ %>
+                        <option value="<%= supply[i].id %>"><%= supply[i].name %>-<%= supply[i].price %></option>
+                    <% } %>
+                </select><br>
+                <input class="input" type="number" placeholder="quantity" name="quantity"></br>
+                <input id="login" type="submit" name = "Add Item"> 
+            </form>
+        </div>
+    </body>
+    <%- include('../partials/footer.ejs')%>
+</html>

@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "ahmadalhq",
+    "password": "empatpuluh6",
+    "database": "QRoti",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+}

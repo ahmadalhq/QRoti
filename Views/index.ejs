@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/style/index.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Spartan" rel="stylesheet">
+    <title>:OUR WORLD: - Welcome </title>
+  </head>
+
+<body class="index">
+  <%- include ('./partials/header.ejs') %>
+
+  <!-- <%- include ('./partials/logo.ejs') %> -->
+
+  <div class="welcome">
+    <h1> Welcome to QRoti </h1>
+  </div>
+
+  <div class="intro">
+    <p>We're proudly served fresh goods everyday for our customers, so what do you need today?</p>
+  </div>
+
+  <div class="container">
+    <button type="button" class="btn btn-warning"><a href="/register">REGISTER</a></button><br><br>
+    <button type="button" class="btn btn-warning"><a href="/login">LOGIN</a></button>
+  </div>
+
+  <%- include('./partials/footer.ejs')%>
+</body>
+
+</html>

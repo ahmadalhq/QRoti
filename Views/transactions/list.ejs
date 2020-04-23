@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome Back <%= name %>- Transactions </title>
+        <link href="/style/supply.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Spartan" rel="stylesheet">
+    </head>
+    <script src="../scripts/JsBarcode.all.min.js">
+    let file = document.getElementById("data").getAttribute("var");
+    JsBarcode("#barcode", "Hi world!");
+    </script>
+    <body>
+        <%- include('../partials/supplyheader.ejs')%>
+        <div class="container-fluid">
+            <div id="data" var="<%= data %>"></div>
+            <h1>Welcome, <%= name %> </h1>
+            <div class="center"><p>Item List</p></div>
+            <table class="table table-condensed">
+                <tr>
+                    <td>ID</td>
+                    <td>Buyer</td>
+                    <td>Product Name</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                    <td>Total</td>
+                    <td>Cashier</td>
+                </tr>
+                <br>
+                <% for (let i = 0; i < data.length; i++ ){ %>
+                <tr>
+                    <td><%= data[i].id %></td>
+                    <td><%= data[i].buyer %></td>
+                    <td><%= data[i].Supply.name %></td>
+                    <td><%= data[i].quantity %></td>
+                    <td><%= data[i].Supply.price %></td>
+                    <td><%= data[i].total %></td>
+                    <td><%= data[i].User.fullname %></td>
+                </tr>
+                <br>
+            <% } %>
+            </table>
+        </div>
+    </body>
+    <%- include('../partials/footer.ejs')%>
+</html>

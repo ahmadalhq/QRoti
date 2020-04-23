@@ -1,0 +1,57 @@
+header {
+    /* background-image:url("./img/headerpic.png");
+    background-size: cover;
+    background-position: center; */
+    background-color: rgb(56, 150, 204);
+    text-align:left;
+    height:50px;
+    position: sticky;
+}
+
+header a { 
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    margin-left: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.container-fluid {
+    top: auto;
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.container {
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.table table-bordered {
+    width: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+footer {
+    margin-top: 10vmax;
+    margin-left: -10px;
+    margin-right: -12px;
+    background-color: rgb(56, 150, 204);
+    text-align:center;
+    height:50px;
+}
+
+h5.foot {
+    font-family: 'Lato', sans-serif;
+    color: white;
+}

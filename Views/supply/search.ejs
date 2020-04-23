@@ -10,9 +10,10 @@
         <%- include('../partials/supplyheader.ejs')%>
         <div class="container-fluid">
             <form action="/supply/search" method="POST">
-                <input type="text" placeholder="What item are you looking to?" name="name">
+                <input type="text" placeholder="What item are you looking to?" name="search">
                 <input type="submit">
             </form>
+            <table class="table table-bordered">
             <div class="table">
             <tr>
                 <td>ID</td>
@@ -20,17 +21,18 @@
                 <td>Type</td>
                 <td>Quantity</td>
                 <td>Price</td>
-            </tr>
+            </tr><br>
             <% for (let i = 0; i < data.length ; i++){ %>
             <tr>
                 <td><%= data[i].id %></td>
                 <td><%= data[i].name %></td>
-                <td><%= data[i].type %></td>
+                <td><%= data[i].product_type %></td>
                 <td><%= data[i].quantity %></td>
                 <td><%= data[i].price %></td>
-            </tr>
+            </tr><br>
             <% } %>
             </div>
+            </table>
         </div>
     </body>
     <%- include('../partials/footer.ejs')%>

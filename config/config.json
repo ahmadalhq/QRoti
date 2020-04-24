@@ -1,9 +1,17 @@
 {
   "development": {
-    "username": "ahmadalhq",
-    "password": "empatpuluh6",
-    "database": "QRoti",
+    "username": "postgres",
+    "password": "xxxx",
+    "database": "postgres",
     "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production" : {
+    "username": "twiuyjrrwvjrpm",
+    "password": "54987339ce1ca0dd094098390b77860917da33a7db9c02d9af7345963ebd546d",
+    "database": "d5li4g148ulpm2",
+    "host": "ec2-18-233-137-77.compute-1.amazonaws.com",
     "dialect": "postgres",
     "operatorsAliases": false
   }

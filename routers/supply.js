@@ -10,9 +10,9 @@ router.get('/add', test , SupplyController.addSupplyPage) // add new item
 
 router.post('/add', test , SupplyController.addSupply)
 
-router.get('/search', test , SupplyController.searchPage) // IGNORE FOR WHILE
+router.get('/search', test , SupplyController.searchPage) // Search item
 
-router.post('/search',test , SupplyController.searching) // IGNORE FOR WHILE
+router.post('/search',test , SupplyController.searching) 
 
 router.get('/edit/:id', test , SupplyController.editSupplyPage) // edit item
 

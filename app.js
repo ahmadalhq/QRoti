@@ -22,4 +22,4 @@ app.use(router)
 
 // app.get('/',(req,res) => res.send('sleep'))
 
-app.listen(port, () => console.log('localhost:3000 connected'))
+app.listen(port, () => console.log(`localhost:${port} connected`))

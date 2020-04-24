@@ -7,6 +7,9 @@ const session = require('express-session')
 
 app.set('view engine','ejs')
 
+app.set('views', express.static(__dirname + '/Views'));
+
+
 app.use(express.urlencoded({extended : true}))
 app.use(express.static(__dirname + '/public'))
 
